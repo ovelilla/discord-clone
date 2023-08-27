@@ -1,0 +1,11 @@
+npm i -D prisma
+npx prisma init
+
+docker-compose -f docker-compose.yml up --build -d
+
+npx prisma generate
+npx prisma db push
+
+npm i @prisma/client
+
+npx prisma studio
